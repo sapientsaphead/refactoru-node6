@@ -27,7 +27,7 @@ Build a real-time chat application using Socket.io
 
 ![info - socket.io started](http://fall2013.refactoru.com/public/img/screenshots/nodejs/socketio-running.png)
 
-	`You now have socket.io running!`
+	_You now have socket.io running!_
 
 #### Part II (Setup socket events on the server)
 
@@ -35,7 +35,7 @@ Build a real-time chat application using Socket.io
 2. Create an empty object _outside_ of your connection event to hold our users.
 3. Create an event __inside__ of the connection event to receive a message
 
-	`Note that all of our socket events on the server will go inside of the connection event`
+	_Note that all of our socket events on the server will go inside of the connection event_
 
 
 #### Part III (Setup socket events on the client)
@@ -59,7 +59,7 @@ Build a real-time chat application using Socket.io
 1. Whenever someone connects to the chat room. Display a message to the room that shows that someone has connected.
 2. Whenever someone disconnects, announce to teh room that someone has left.
 
-	`Use the "disconnect" event`
+	_Use the "disconnect" event_
 
 
 #### Bonus II
@@ -67,6 +67,7 @@ Build a real-time chat application using Socket.io
 1. When a user connects to the server, emit an event that shows their socket ID in the right column of that chat UI.
 2. Create a feature that allows the user to change their user name.
 
-	`Everytime someone connects or disconnects you should be updating the "users" object that we created in Part II`
+	_Everytime someone connects or disconnects you should be updating the "users" object 
+	that we created in Part II_
 
-`Success! Now you know how to create a real-time web app using websockets!`
+__Success!__ Now you know how to create a real-time web app using websockets!
