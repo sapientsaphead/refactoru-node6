@@ -27,15 +27,15 @@ Build a real-time chat application using Socket.io
 
 ![info - socket.io started](http://fall2013.refactoru.com/public/img/screenshots/nodejs/socketio-running.png)
 
-_You now have socket.io running!_
+	`You now have socket.io running!`
 
 #### Part II (Setup socket events on the server)
 
 1. Now let's create an event to let the server know when a connection has been made by the client. Add a "connection" event to your app.js `io.sockets.on('connection',function(){...});`
 2. Create an empty object _outside_ of your connection event to hold our users.
-3. Create an event inside of the connection event to receive a message
+3. Create an event __inside__ of the connection event to receive a message
 
-_Note that all of our socket events on the server will go inside of the connection event_
+	`Note that all of our socket events on the server will go inside of the connection event`
 
 
 #### Part III (Setup socket events on the client)
@@ -48,9 +48,9 @@ _Note that all of our socket events on the server will go inside of the connecti
 #### Part IV (Send messages)
 
 1. Write some jQuery to capture a keyup event. When enter is pressed use `socket.emit('message', 'SOME MESSAGE');` to send a message to your server
-2. _On the server_ `console.log()` the message to ensure that the message has made it to the server.
-3. On the server in your "message" event. Send the message to the entire chatroom by doing `io.sockets.emit('message', 'my message');`
-4. On the client when the "message" event is fired, append the message to the div with the id "room"
+2. __On the server__ `console.log()` the message to ensure that the message has made it to the server.
+3. __On the server__ in your "message" event. Send the message to the entire chatroom by doing `io.sockets.emit('message', 'my message');`
+4. __On the client__ when the "message" event is fired, append the message to the div with the id "room"
 5. You should be able to open two tabs in Chrome with [http://localhost:3000](http://localhost:3000/) and chat back and forth
 
 
@@ -59,7 +59,7 @@ _Note that all of our socket events on the server will go inside of the connecti
 1. Whenever someone connects to the chat room. Display a message to the room that shows that someone has connected.
 2. Whenever someone disconnects, announce to teh room that someone has left.
 
-	_Use the "disconnect" event_
+	`Use the "disconnect" event`
 
 
 #### Bonus II
@@ -67,6 +67,6 @@ _Note that all of our socket events on the server will go inside of the connecti
 1. When a user connects to the server, emit an event that shows their socket ID in the right column of that chat UI.
 2. Create a feature that allows the user to change their user name.
 
-	_Everytime someone connects or disconnects you should be updating the "users" object that we created in Part II_
+	`Everytime someone connects or disconnects you should be updating the "users" object that we created in Part II`
 
-_Success! Now you know how to create a real-time web app using websockets!_
+`Success! Now you know how to create a real-time web app using websockets!`
